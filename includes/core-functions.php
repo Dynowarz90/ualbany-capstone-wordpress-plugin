@@ -39,11 +39,11 @@ function uacapstone_custom_structured_markup( $markup ) {
 		
 	}
 	
-	return $markup;
+	echo $markup;
 	
 }
 
 //This hook takes the output of our function and passes it in between the <head> tags in the page.  
-add_filter( 'wp_head', 'uacapstone_custom_structured_markup' );
+add_action( 'wp_head', 'uacapstone_custom_structured_markup' );
 
 
