@@ -32,7 +32,6 @@ function uacapstone_custom_structured_markup( $markup ) {
 	if ( isset( $options['phone_number'] ) && ! empty( $options['phone_number'] ) ) {
 		
         //Concatinate Schema.org JSON-LD array with the string below:
-        //We might have to check the order of strings concatinated. 
         //The original line below before concatination is: $markup = wp_kses_post( $options['phone_number'] ) . $markup;
 
 		$markup = $schemaHeader .  wp_kses_post( $options['phone_number'] ) . $schemaFooter . $markup;

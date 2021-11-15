@@ -35,7 +35,7 @@ function uacapstone_register_settings() {
 	add_settings_section( 
 		string   $id, 
 		string   $title, 
-		callable $callback, 
+		callable $callback, <- Displays markup for the caption under the settings section heading. 
 		string   $page
 	);
 	
@@ -47,14 +47,6 @@ function uacapstone_register_settings() {
 		'uacapstone_callback_section_schema', 
 		'uacapstone'
 	);
-	
-    // We're not using this delete it later. 
-	// add_settings_section( 
-	// 	'myplugin_section_admin', 
-	// 	'Customize Admin Area', 
-	// 	'myplugin_callback_section_admin', 
-	// 	'myplugin'
-	// );
 
 	/*
 
