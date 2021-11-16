@@ -64,20 +64,20 @@ function uacapstone_callback_field_text( $args ) {
 // 	}	
 // }
 
-// // callback: textarea field
-// function uacapstone_callback_field_textarea( $args ) {
-// 	$options = get_option( 'uacapstone_options', uacapstone_options_default() );
+// callback: textarea field
+function uacapstone_callback_field_textarea( $args ) {
+	$options = get_option( 'uacapstone_options', uacapstone_options_default() );
 	
-// 	$id    = isset( $args['id'] )    ? $args['id']    : '';
-// 	$label = isset( $args['label'] ) ? $args['label'] : '';
+	$id    = isset( $args['id'] )    ? $args['id']    : '';
+	$label = isset( $args['label'] ) ? $args['label'] : '';
 	
-// 	$allowed_tags = wp_kses_allowed_html( 'post' );
+	$allowed_tags = wp_kses_allowed_html( 'post' );
 	
-// 	$value = isset( $options[$id] ) ? wp_kses( stripslashes_deep( $options[$id] ), $allowed_tags ) : '';
+	$value = isset( $options[$id] ) ? wp_kses( stripslashes_deep( $options[$id] ), $allowed_tags ) : '';
 	
-// 	echo '<textarea id="uacapstone_options_'. $id .'" name="uacapstone_options['. $id .']" rows="5" cols="50">'. $value .'</textarea><br />';
-// 	echo '<label for="uacapstone_options_'. $id .'">'. $label .'</label>';	
-// }
+	echo '<textarea id="uacapstone_options_'. $id .'" name="uacapstone_options['. $id .']" rows="5" cols="50">'. $value .'</textarea><br />';
+	echo '<label for="uacapstone_options_'. $id .'">'. $label .'</label>';	
+}
 
 // // callback: checkbox field
 // function uacapstone_callback_field_checkbox( $args ) {
@@ -96,18 +96,18 @@ function uacapstone_callback_field_text( $args ) {
 function uacapstone_options_select() {
 	return array(
 		'default'   => esc_html__('Default',   'uacapstone'),
-		'monday'     => esc_html__('Monday',     'uacapstone'),
-		'tuesday'      => esc_html__('Tuesday',      'uacapstone'),
-		'wednesday'    => esc_html__('Wednesday',    'uacapstone'),
-		'thursday' => esc_html__('Thursday', 'uacapstone'),
-		'friday'  => esc_html__('Friday',  'uacapstone'),
-		'saturday'     => esc_html__('Saturday',     'uacapstone'),
-		'sunday'   => esc_html__('Sunday',   'uacapstone'),
+		// 'monday'     => esc_html__('Monday',     'uacapstone'),
+		// 'tuesday'      => esc_html__('Tuesday',      'uacapstone'),
+		// 'wednesday'    => esc_html__('Wednesday',    'uacapstone'),
+		// 'thursday' => esc_html__('Thursday', 'uacapstone'),
+		// 'friday'  => esc_html__('Friday',  'uacapstone'),
+		// 'saturday'     => esc_html__('Saturday',     'uacapstone'),
+		// 'sunday'   => esc_html__('Sunday',   'uacapstone'),
 
 		// not completed
 		'localbusiness'   => esc_html__('Local Business',   'uacapstone'),
-		'article'   => esc_html__('Book',   'uacapstone'),
-		'faq'   => esc_html__('FAQ',   'uacapstone'),
+		// 'article'   => esc_html__('Book',   'uacapstone'),
+		// 'faq'   => esc_html__('FAQ',   'uacapstone'),
 	);
 }
 
