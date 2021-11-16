@@ -38,12 +38,6 @@ function uacapstone_callback_validate_options( $input ) {
 
 	}
 
-	if ( isset( $input['address'] ) ) {	
-	
-		$input['address'] = sanitize_text_field( $input['address'] );
-	
-	}
-
 	if ( isset( $input['PostalAddress'] ) ) {	
 	
 		$input['PostalAddress'] = sanitize_text_field( $input['PostalAddress'] );
