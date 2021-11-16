@@ -103,14 +103,6 @@ function uacapstone_register_settings() {
 		[ 'id' => 'Website_URL', 'label' => esc_html__('Enter your organization\'s Website URL. ', 'uacapstone') ]
 	);
 	add_settings_field(
-		'address',
-		esc_html__('Address', 'uacapstone'),
-		'uacapstone_callback_field_text',
-		'uacapstone', 
-		'uacapstone_section_schema', 
-		[ 'id' => 'address', 'label' => esc_html__('Enter your organization\'s address. ', 'uacapstone') ]
-	);
-	add_settings_field(
 		'PostalAddress',
 		esc_html__('Postal address', 'uacapstone'),
 		'uacapstone_callback_field_text',
