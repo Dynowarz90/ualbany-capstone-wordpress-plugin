@@ -47,13 +47,16 @@ require_once plugin_dir_path( __FILE__ ) . 'includes/core-functions.php';
 function uacapstone_options_default() {
 
 	return array(
-		'type_of_Schema'     => esc_html__( 'Local Business', 'uacapstone' ),
-		'establish_name'     => esc_html__( '', 'uacapstone' ),
-		'Website_URL'     => esc_html__( '', 'uacapstone' ),
+		'type'     => esc_html__( 'Local Business', 'uacapstone' ),
+		'name'     => esc_html__( 'Name of local business', 'uacapstone' ),
+		'telephone'     => esc_html__( '+1(555)555-5555', 'uacapstone' ),
+		'description'     => esc_html__( 'Local business', 'uacapstone' ),
+		'Website_URL'     => esc_html__( 'https://schema.org', 'uacapstone' ),
 		'address'     => esc_html__( '', 'uacapstone' ),
-		'phone_number'     => esc_html__( '+1(555)555-5555', 'uacapstone' ),
-		'day_of_work'     => esc_html__( 'Monday', 'uacapstone' ),
-		'hours_ope'     => esc_html__( '', 'uacapstone' ),
+		'PostalAddress'     => esc_html__( '', 'uacapstone' ),
+		'streetAddress'     => esc_html__( '', 'uacapstone' ),
+		'addressRegion'     => esc_html__( '', 'uacapstone' ),
+		'addressLocality'     => esc_html__( '', 'uacapstone' ),
 
 
 		// 'custom_url'     => 'https://wordpress.org/',
