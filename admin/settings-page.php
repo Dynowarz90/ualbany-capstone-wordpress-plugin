@@ -42,4 +42,3 @@ function uacapstone_display_settings_page() {
 	
 }
 
-

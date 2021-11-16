@@ -20,5 +20,3 @@ if ( ! defined( 'WP_UNINSTALL_PLUGIN' ) ) {
 
 // delete the plugin options
 delete_option( 'uacapstone_options' );
-
-

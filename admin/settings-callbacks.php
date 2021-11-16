@@ -35,3 +35,21 @@ function uacapstone_callback_field_text( $args ) {
 	echo '<label for="uacapstone_options_'. $id .'">'. $label .'</label>';
 	
 }
+
+
+
+// callback: textarea field
+function uacapstone_callback_field_textarea( $args ) {
+	$options = get_option( 'uacapstone_options', uacapstone_options_default() );
+	
+	$id    = isset( $args['id'] )    ? $args['id']    : '';
+	$label = isset( $args['label'] ) ? $args['label'] : '';
+	
+	//$allowed_tags = wp_kses_allowed_html( 'post' );
+	
+	$value = isset( $options[$id] ) ? sanitize_textarea_field( $options[$id] ) : '';
+	
+	echo '<textarea id="uacapstone_options_'. $id .'" name="uacapstone_options['. $id .']" rows="5" cols="50">'. $value .'</textarea><br />';
+	echo '<label for="uacapstone_options_'. $id .'">'. $label .'</label>';	
+}
+

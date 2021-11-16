@@ -8,8 +8,8 @@
  */
 
 
- //Prevents direct access. 
- if ( ! defined( 'ABSPATH' ) ) {
+//Prevents direct access. 
+if ( ! defined( 'ABSPATH' ) ) {
 
 	exit;
 
@@ -47,13 +47,17 @@ require_once plugin_dir_path( __FILE__ ) . 'includes/core-functions.php';
 function uacapstone_options_default() {
 
 	return array(
-		'phone_number'     => esc_html__( '+1(555)555-5555', 'uacapstone' ),
-		// 'custom_title'   => 'Powered by WordPress',
-		// 'custom_style'   => 'disable',
-		// 'custom_message' => '<p class="custom-message">My custom message</p>',
-		// 'custom_footer'  => 'Special message for users',
-		// 'custom_toolbar' => false,
-		// 'custom_scheme'  => 'default',
+		//'type'     => esc_html__( 'Local Business', 'uacapstone' ),
+		'name'     => esc_html__( 'Name of local business', 'uacapstone' ),
+		'telephone'     => esc_html__( '+1(555)555-5555', 'uacapstone' ),
+		'description'     => esc_html__( 'Local business', 'uacapstone' ),
+		//'Website_URL'     => esc_html__( 'https://schema.org', 'uacapstone' ),
+		//'address'     => esc_html__( '', 'uacapstone' ),
+		//'PostalAddress'     => esc_html__( '', 'uacapstone' ),
+		'streetAddress'     => esc_html__( '123 Main St.', 'uacapstone' ),
+		'addressRegion'     => esc_html__( 'NY', 'uacapstone' ),
+		'addressLocality'     => esc_html__( 'Albany', 'uacapstone' ),
+
 	);
 
 }

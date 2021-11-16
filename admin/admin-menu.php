@@ -12,21 +12,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 // add sub-level administrative menu
 function uacapstone_add_sublevel_menu() {
 	
-	/*
 	
 	add_submenu_page(
-		string   $parent_slug,
-		string   $page_title,
-		string   $menu_title,
-		string   $capability,
-		string   $menu_slug,
-		callable $function = ''
-	);
-	
-	*/
-	
-	add_submenu_page(
-		'options-general.php',
+		'options-general.php', // 'tools.php' for under 'Tools'
 		esc_html__( 'UAlbany Capstone Schema Plugin Settings', 'uacapstone' ),
 		esc_html__( 'UA Capstone', 'uacapstone' ),
 		'manage_options',
