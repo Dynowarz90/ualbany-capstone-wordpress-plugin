@@ -52,7 +52,6 @@ function uacapstone_options_default() {
 		'telephone'     => esc_html__( '+1(555)555-5555', 'uacapstone' ),
 		'description'     => esc_html__( 'Local business', 'uacapstone' ),
 		'Website_URL'     => esc_html__( 'https://schema.org', 'uacapstone' ),
-		'address'     => esc_html__( '', 'uacapstone' ),
 		'PostalAddress'     => esc_html__( '', 'uacapstone' ),
 		'streetAddress'     => esc_html__( '', 'uacapstone' ),
 		'addressRegion'     => esc_html__( '', 'uacapstone' ),
