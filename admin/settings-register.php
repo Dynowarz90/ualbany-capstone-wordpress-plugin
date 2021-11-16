@@ -63,20 +63,36 @@ function uacapstone_register_settings() {
 
     //Duplicate this for as many fields as you would like to add
 	add_settings_field(
-		'type_of_Schema',
+		'type',
 		esc_html__('Type of Schema', 'uacapstone'),
 		'uacapstone_callback_field_select',
 		'uacapstone', 
 		'uacapstone_section_schema', 
-		[ 'id' => 'type_of_Schema', 'label' => esc_html__('Choose your organization\'s type. ', 'uacapstone') ]
+		[ 'id' => 'type', 'label' => esc_html__('Choose your organization\'s type. ', 'uacapstone') ]
 	);
 	add_settings_field(
-		'establish_name',
-		esc_html__('Establishment Name', 'uacapstone'),
+		'name',
+		esc_html__('Name', 'uacapstone'),
 		'uacapstone_callback_field_text',
 		'uacapstone', 
 		'uacapstone_section_schema', 
-		[ 'id' => 'establish_name', 'label' => esc_html__('Enter your organization\'s establishment name. ', 'uacapstone') ]
+		[ 'id' => 'name', 'label' => esc_html__('Enter local business\'s name. ', 'uacapstone') ]
+	);
+	add_settings_field(
+		'telephone',
+		esc_html__('Phone Number', 'uacapstone'),
+		'uacapstone_callback_field_text',
+		'uacapstone', 
+		'uacapstone_section_schema', 
+		[ 'id' => 'telephone', 'label' => esc_html__( 'Enter your organization\'s phone number.', 'uacapstone' ) ]
+	);
+	add_settings_field(
+		'description',
+		esc_html__('Description', 'uacapstone'),
+		'uacapstone_callback_field_textarea',
+		'uacapstone', 
+		'uacapstone_section_schema', 
+		[ 'id' => 'description', 'label' => esc_html__('Enter local business\'s description. ', 'uacapstone') ]
 	);
 	add_settings_field(
 		'Website_URL',
@@ -95,29 +111,54 @@ function uacapstone_register_settings() {
 		[ 'id' => 'address', 'label' => esc_html__('Enter your organization\'s address. ', 'uacapstone') ]
 	);
 	add_settings_field(
-		'phone_number',
-		esc_html__('Phone Number', 'uacapstone'),
+		'PostalAddress',
+		esc_html__('Postal address', 'uacapstone'),
 		'uacapstone_callback_field_text',
 		'uacapstone', 
 		'uacapstone_section_schema', 
-		[ 'id' => 'phone_number', 'label' => esc_html__( 'Enter your organization\'s phone number.', 'uacapstone' ) ]
+		[ 'id' => 'PostalAddress', 'label' => esc_html__('Enter your organization\'s postal address. ', 'uacapstone') ]
 	);
 	add_settings_field(
-		'day_of_work',
-		esc_html__('Day of Week', 'uacapstone'),
-		'uacapstone_callback_field_select',
-		'uacapstone', 
-		'uacapstone_section_schema', 
-		[ 'id' => 'day_of_work', 'label' => esc_html__('Choose your organization\'sday of week. ', 'uacapstone') ]
-	);
-	add_settings_field(
-		'hours_ope',
-		esc_html__('Hours of Operation', 'uacapstone'),
+		'streetAddress',
+		esc_html__('Street address', 'uacapstone'),
 		'uacapstone_callback_field_text',
 		'uacapstone', 
 		'uacapstone_section_schema', 
-		[ 'id' => 'hours_ope', 'label' => esc_html__('Enter your organization\'s hours of operation. ', 'uacapstone') ]
+		[ 'id' => 'streetAddress', 'label' => esc_html__('Enter your organization\'s street address. ', 'uacapstone') ]
 	);
+	add_settings_field(
+		'addressRegion',
+		esc_html__('Address region', 'uacapstone'),
+		'uacapstone_callback_field_text',
+		'uacapstone', 
+		'uacapstone_section_schema', 
+		[ 'id' => 'addressRegion', 'label' => esc_html__('Enter your organization\'s address region. ', 'uacapstone') ]
+	);
+	add_settings_field(
+		'addressLocality',
+		esc_html__('Address locality', 'uacapstone'),
+		'uacapstone_callback_field_text',
+		'uacapstone', 
+		'uacapstone_section_schema', 
+		[ 'id' => 'addressLocality', 'label' => esc_html__('Enter your organization\'s address locality. ', 'uacapstone') ]
+	);
+
+	// add_settings_field(
+	// 	'day_of_work',
+	// 	esc_html__('Day of Week', 'uacapstone'),
+	// 	'uacapstone_callback_field_select',
+	// 	'uacapstone', 
+	// 	'uacapstone_section_schema', 
+	// 	[ 'id' => 'day_of_work', 'label' => esc_html__('Choose your organization\'sday of week. ', 'uacapstone') ]
+	// );
+	// add_settings_field(
+	// 	'hours_ope',
+	// 	esc_html__('Hours of Operation', 'uacapstone'),
+	// 	'uacapstone_callback_field_text',
+	// 	'uacapstone', 
+	// 	'uacapstone_section_schema', 
+	// 	[ 'id' => 'hours_ope', 'label' => esc_html__('Enter your organization\'s hours of operation. ', 'uacapstone') ]
+	// );
 
 
 }
