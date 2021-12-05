@@ -13,6 +13,13 @@ if ( ! defined( 'ABSPATH' ) ) {
 function uacapstone_callback_validate_options( $input ) {
 	
     //Duplicate this for as many fields as you would like to add
+
+	if ( isset( $input['selected_page'] ) ) {	
+	
+		$input['selected_page'] = sanitize_text_field( $input['selected_page'] );
+	
+	}
+
 	if ( isset( $input['name'] ) ) {	
 	
 		$input['name'] = sanitize_text_field( $input['name'] );
@@ -96,6 +103,22 @@ function uacapstone_callback_validate_options( $input ) {
 	// if ( ! array_key_exists( $input['custom_scheme'], $select_options ) ) {	 
 	// 	$input['custom_scheme'] = null;
 	// }
+
+
+	// custom scheme
+	$select_options = uacapstone_options_select();
+	
+	if ( ! isset( $input['selected_page'] ) ) {
+		
+		$input['selected_page'] = null;
+		
+	}
+	
+	if ( ! array_key_exists( $input['selected_page'], $select_options ) ) {
+		
+		$input['selected_page'] = null;
+	
+	}
 
 	return $input;
 	

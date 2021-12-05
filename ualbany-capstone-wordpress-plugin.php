@@ -28,6 +28,7 @@ add_action( 'plugins_loaded', 'uacapstone_load_textdomain' );
 
 
 // if admin area
+
 if ( is_admin() ) {
 
 	// include dependencies
@@ -48,6 +49,7 @@ function uacapstone_options_default() {
 
 	return array(
 		//'type'     => esc_html__( 'Local Business', 'uacapstone' ),
+		'selected_page' => esc_html__( '2', 'uacapstone' ),
 		'name'     => esc_html__( 'Name of local business', 'uacapstone' ),
 		'telephone'     => esc_html__( '+1(555)555-5555', 'uacapstone' ),
 		'description'     => esc_html__( 'Local business', 'uacapstone' ),

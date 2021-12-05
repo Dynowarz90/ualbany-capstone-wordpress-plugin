@@ -13,6 +13,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 // register plugin settings
 function uacapstone_register_settings() {
 	
+	//Register settings. 
 	
 	register_setting( 
 		'uacapstone_options', 
@@ -21,7 +22,7 @@ function uacapstone_register_settings() {
 	); 
 
 
-
+	//Create settings section. 
 	
 	add_settings_section( 
 		'uacapstone_section_schema', 
@@ -31,7 +32,19 @@ function uacapstone_register_settings() {
 	);
 
 
+	//Below are the separate settings fields. 
 
+	//Select Schema page dropdown. 
+	add_settings_field(
+		'selected_page',
+		esc_html__( 'Page', 'uacapstone'),
+		'uacapstone_callback_field_select',
+		'uacapstone', 
+		'uacapstone_section_schema', 
+		[ 'id' => 'selected_page', 'label' => esc_html__('Select a page to display the Schema on. ', 'uacapstone') ]
+	);
+
+	//Name field
 	add_settings_field(
 		'name',
 		esc_html__('Name', 'uacapstone'),
@@ -40,6 +53,8 @@ function uacapstone_register_settings() {
 		'uacapstone_section_schema', 
 		[ 'id' => 'name', 'label' => esc_html__('Enter local business\'s name. ', 'uacapstone') ]
 	);
+
+	//Phone number field. 
 	add_settings_field(
 		'telephone',
 		esc_html__('Phone Number', 'uacapstone'),
@@ -48,6 +63,8 @@ function uacapstone_register_settings() {
 		'uacapstone_section_schema', 
 		[ 'id' => 'telephone', 'label' => esc_html__( 'Enter your organization\'s phone number.', 'uacapstone' ) ]
 	);
+
+	//Description text field. 
 	add_settings_field(
 		'description',
 		esc_html__('Description', 'uacapstone'),
@@ -80,6 +97,9 @@ function uacapstone_register_settings() {
 	// 	'uacapstone_section_schema', 
 	// 	[ 'id' => 'PostalAddress', 'label' => esc_html__('Enter your organization\'s postal address. ', 'uacapstone') ]
 	// );
+
+
+	//Street address field. 
 	add_settings_field(
 		'streetAddress',
 		esc_html__('Address', 'uacapstone'),
@@ -88,6 +108,8 @@ function uacapstone_register_settings() {
 		'uacapstone_section_schema', 
 		[ 'id' => 'streetAddress', 'label' => esc_html__('Enter your organization\'s street address. ', 'uacapstone') ]
 	);
+
+	//State field. 
 	add_settings_field(
 		'addressRegion',
 		esc_html__('State', 'uacapstone'),
@@ -96,6 +118,8 @@ function uacapstone_register_settings() {
 		'uacapstone_section_schema', 
 		[ 'id' => 'addressRegion', 'label' => esc_html__('Enter your organization\'s address region. ', 'uacapstone') ]
 	);
+
+	//City field. 
 	add_settings_field(
 		'addressLocality',
 		esc_html__('City', 'uacapstone'),
