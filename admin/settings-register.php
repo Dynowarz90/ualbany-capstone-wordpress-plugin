@@ -30,7 +30,7 @@ function uacapstone_register_settings() {
 	); 
 
 
-    	/*
+	/*
 	
 	add_settings_section( 
 		string   $id, 
@@ -60,16 +60,15 @@ function uacapstone_register_settings() {
 	);
 
 	*/
-
-    //Duplicate this for as many fields as you would like to add
-	add_settings_field(
-		'type',
-		esc_html__('Type of Schema', 'uacapstone'),
-		'uacapstone_callback_field_select',
-		'uacapstone', 
-		'uacapstone_section_schema', 
-		[ 'id' => 'type', 'label' => esc_html__('Choose your organization\'s type. ', 'uacapstone') ]
-	);
+	
+	// add_settings_field(
+	// 	'type',
+	// 	esc_html__('Type of Schema', 'uacapstone'),
+	// 	'uacapstone_callback_field_select',
+	// 	'uacapstone', 
+	// 	'uacapstone_section_schema', 
+	// 	[ 'id' => 'type', 'label' => esc_html__('Choose your organization\'s type. ', 'uacapstone') ]
+	// );
 	add_settings_field(
 		'name',
 		esc_html__('Name', 'uacapstone'),
@@ -135,23 +134,14 @@ function uacapstone_register_settings() {
 		[ 'id' => 'addressLocality', 'label' => esc_html__('Enter your organization\'s address locality. ', 'uacapstone') ]
 	);
 
-	// add_settings_field(
-	// 	'day_of_work',
-	// 	esc_html__('Day of Week', 'uacapstone'),
-	// 	'uacapstone_callback_field_select',
-	// 	'uacapstone', 
-	// 	'uacapstone_section_schema', 
-	// 	[ 'id' => 'day_of_work', 'label' => esc_html__('Choose your organization\'sday of week. ', 'uacapstone') ]
-	// );
-	// add_settings_field(
-	// 	'hours_ope',
-	// 	esc_html__('Hours of Operation', 'uacapstone'),
-	// 	'uacapstone_callback_field_text',
-	// 	'uacapstone', 
-	// 	'uacapstone_section_schema', 
-	// 	[ 'id' => 'hours_ope', 'label' => esc_html__('Enter your organization\'s hours of operation. ', 'uacapstone') ]
-	// );
-
-
+	add_settings_field(
+		'select_page',
+		esc_html__('Select page', 'uacapstone'),
+		'uacapstone_callback_field_select',
+		'uacapstone', 
+		'uacapstone_section_schema', 
+		[ 'id' => 'select_page', 'label' => esc_html__('Aaaaa. ', 'uacapstone') ]
+	);
+	
 }
 add_action( 'admin_init', 'uacapstone_register_settings' );
