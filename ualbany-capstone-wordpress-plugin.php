@@ -48,7 +48,7 @@ function uacapstone_options_default() {
 
 	return array(
 		// 'type'     => esc_html__( 'Local Business', 'uacapstone' ),
-		'select_page'     => esc_html__( 'Dafault', 'uacapstone' ),
+		// 'select_page'     => esc_html__( 'Dafault', 'uacapstone' ),
 		'name'     => esc_html__( 'Name of local business', 'uacapstone' ),
 		'telephone'     => esc_html__( '+1(555)555-5555', 'uacapstone' ),
 		'description'     => esc_html__( 'Local business', 'uacapstone' ),
@@ -73,7 +73,8 @@ function uacapstone_options_default() {
  * Add_post_enctype.
  */
 function add_post_enctype() {
-	echo '123456789123456789123456789123456789123456789
+	echo '
+	123456789123456789123456789123456789123456789
 	<script type="text/javascript">
 	jQuery(document).ready(function(){
 		jQuery("#post").attr("enctype", "multipart/form-data");
