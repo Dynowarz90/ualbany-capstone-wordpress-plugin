@@ -100,7 +100,7 @@ function uacapstone_custom_structured_markup( $markup ) {
 			//Output the result. 
 			echo $markup;
 		
-		}
+		// }
 	// }
 }
 
