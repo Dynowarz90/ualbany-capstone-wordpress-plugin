@@ -20,7 +20,7 @@ function uacapstone_custom_structured_markup( $markup ) {
 
 			$schemaOpeningToAddressLocality = '<script type="application/ld+json">
 			{
-			"@context": "' . get_site_url() . '",
+			"@context": "https://schema.org",
 			"@type": "LocalBusiness",
 			"address": {
 				"@type": "PostalAddress",
